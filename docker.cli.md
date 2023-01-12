@@ -1,3 +1,7 @@
+## 清空
+`docker system prune -f` (清空所有非運行的 container 及 cache)
+`docker image prune -a` (清空所有 image)
+
 ## docker container
 `docker container ls` (列出所有正在運行的 container )
 `docker container ls -a` (列出所有正在運行 及 非運行的 container )
@@ -12,7 +16,8 @@
 `docker container unpause  <name or Id>` (取消暫停)
 `docker container rm <name or Id>` (kill container)
 
-## docker image
+## docker image   
+`docker build . -t <image name>` (創建一個新的 image)  
 `docker image ls` (列出所有 image )
 `docker image rm` (remove image)
 
