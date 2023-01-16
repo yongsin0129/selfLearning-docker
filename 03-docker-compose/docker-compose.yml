@@ -1,0 +1,14 @@
+version: "3.8"
+
+services: # 容器
+  postgres-demo: # 服务名字，这个名字也是内部 bridge网络可以使用的 DNS name
+    container_name: postgresLocal    
+    image: postgres:alpine3.17
+    restart: always
+    environment: # 可选，相当于 docker run里的 --env
+      - POSTGRES_USER=dbuser
+      - POSTGRES_PASSWORD=dbpass
+    volumes: # 可选，相当于docker run里的 -v
+      - //e/homePG/seal/data:/var/lib/postgresql/data
+    ports: # 可选，相当于 docker run里的 -p
+      - 5433:5432
