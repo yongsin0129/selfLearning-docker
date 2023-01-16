@@ -4,7 +4,9 @@ const pool = new Pool({
   host: 'pg', //# 直接放上 compose 裡面的名字，这个名字也是内部 bridge网络可以使用的 DNS name
   database: 'postgres',
   password: 'dbpass',
-  // port: 5433, 上面的 host 如果是 Docker 環境下，不用再加上 port
+  port: 5432,   
+  // 上面的 host 如果是 Docker 環境下，不用加上 port 也可以執行
+  // 但如果有加上 port 的話，記得是 container 裡面的 port 5432 ，不是 expose 的 5433
 })
 
 // UrlLocal = "mongodb://admin:password@localhost:27017"
