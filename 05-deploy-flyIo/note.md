@@ -28,6 +28,10 @@ fly volumes create <volume-name>
 <br>
 https://github.com/over-engineering-run/over-engineering/blob/v0.0.1/fly.toml
 
+10. (re)deploy : flyctl會自已檢查app config
+<br>
+fly deploy
+
 
 ### 踩坑記錄
 + Windows PowerShell 中安裝了 flyctl，但在 VS Code 的 Bash 終端中無法找到 flyctl。
